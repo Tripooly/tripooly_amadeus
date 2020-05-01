@@ -18,7 +18,9 @@
     "docs:dev": "npm run docs:serve && npm run docs:watch",
     "lint:src": "eslint src",
     "lint:docs": "documentation lint src/**",
-    "console": "node -r ./lib/amadeus.js"
+    "console": "node -r ./lib/amadeus.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "jest": {
     "verbose": true,
@@ -56,6 +58,8 @@
   },
   "dependencies": {
     "bluebird": "^3.5.1",
-    "qs": "^6.5.2"
-  }
+    "qs": "^6.5.2",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
